@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Work Duration and Gap Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div style="width: 80%; margin: 0 auto;">
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('barChart').getContext('2d');
+
+        const data = {
+            labels: ['HCLTech', 'Capgemini', 'Marlabs LLC', 'Ascendum Solutions', 'VedicVentures Learnings Pvt. Ltd', 'RGRHCL', 'INFODYNAMICS Inc.'],
+            datasets: [
+                {
+                    label: 'Duration (Months)',
+                    data: [29, 32, 18, 30, 7, 14, 13],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Gap (Months)',
+                    data: [0, 34, 5, 4, 7, 11, 0],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        const options = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        const barChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+    </script>
+</body>
+</html>

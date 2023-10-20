@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Flips with Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 150px;
+            height: 220px;
+            margin: 10px;
+            border-radius: 10px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .card-back img,
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Card Flips with Links</h1>
+    </header>
+
+    <div class="card-container" id="cardContainer"></div>
+
+    <footer>
+        &copy; 2023 Your Company Name
+    </footer>
+
+    <script>
+        // JSON data with card information
+        const cardData = {
+            "cards": [
+                {
+                    "front": "Images\\10_of_clubs.png",
+                    "back": "Images\\Back_blue.png",
+                    "link": "Pages\\Experiece_Single_Colour_Month.html"
+                },
+                {
+                    "front": "Images\\10_of_diamonds.png",
+                     "back": "Images\\Back_blue.png",
+                    "link": "Pages\\Experince_In_Multi_Colour_Years.html"
+                },
+                {
+                    "front": "Images\\10_of_hearts.png",
+                    "back": "Images\\Back_blue.png",
+                    "link": "Pages\\Experince_and_gap_Designation_vertical_Month_.htm"
+                },
+                {
+                    "front": "Images\\10_of_spades.png",
+                    "back": "Images\\Back_blue.png",
+                    "link": "Pages\\Experince_and_gap_In_years_CompanyName_Designation_vertical.html"
+                },
+                {
+                    "front": "Images\\2_of_clubs.png",
+                    "back": "Images\\Back_blue.png",
+                    "link": "Pages\\Experince_In_Multi_Colour_Years.html"
+                },
+                {
+                    "front": "Images\\2_of_diamonds.png",
+                    "back": "Images\\Back_blue.png",
+                    "link": "Pages\\Experince_In_Multi_Colour_Years.html"
+                }
+                // Add more card objects here
+            ]
+        };
+
+        const cardContainer = document.getElementById("cardContainer");
+
+        // Function to create a card element
+        function createCard(cardInfo) {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            const cardInner = document.createElement("div");
+            cardInner.classList.add("card-inner");
+
+            const cardFront = document.createElement("div");
+            cardFront.classList.add("card-front");
+            const frontImage = document.createElement("img");
+            frontImage.src = cardInfo.front;
+            cardFront.appendChild(frontImage);
+
+            const cardBack = document.createElement("div");
+            cardBack.classList.add("card-back");
+            const backImage = document.createElement("img");
+            backImage.src = cardInfo.back;
+            cardBack.appendChild(backImage);
+
+            cardInner.appendChild(cardFront);
+            cardInner.appendChild(cardBack);
+            card.appendChild(cardInner);
+
+            // Add a hyperlink to the card
+            const cardLink = document.createElement("a");
+            cardLink.href = cardInfo.link;
+            cardLink.target = "_blank"; // Opens the link in a new tab
+            cardLink.appendChild(card);
+            
+            return cardLink;
+        }
+
+        // Create cards and add them to the card container
+        cardData.cards.forEach(cardInfo => {
+            const card = createCard(cardInfo);
+            cardContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

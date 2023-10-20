@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Flips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-front img {
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-back img {
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Card Flips</h1>
+    </header>
+
+    <div class="card-container" id="cardContainer"></div>
+
+    <footer>
+        &copy; 2023 Your Company Name
+    </footer>
+
+    <script>
+        // JSON data with card information
+        const cardData = {
+            "cards": [
+                {
+                    "front": "10_of_clubs.png",
+                    "back": "Back_blue.png"
+                },
+                {
+                    "front": "10_of_diamonds.png",
+                    "back": "Back_blue.png"
+                },
+                {
+                    "front": "10_of_hearts.png",
+                    "back": "Back_blue.png"
+                },
+                {
+                    "front": "10_of_spades.png",
+                    "back": "Back_red.png" // Update the back image source
+                },
+                {
+                    "front": "2_of_clubs.png",
+                    "back": "Back_green.png" // Update the back image source
+                },
+                {
+                    "front": "2_of_diamonds.png",
+                    "back": "Back_yellow.png" // Update the back image source
+                }
+                // Add more card objects here
+            ]
+        };
+
+        const cardContainer = document.getElementById("cardContainer");
+
+        // Function to create a card element
+        function createCard(cardInfo) {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            const cardInner = document.createElement("div");
+            cardInner.classList.add("card-inner");
+
+            const cardFront = document.createElement("div");
+            cardFront.classList.add("card-front");
+            const frontImage = document.createElement("img");
+            frontImage.src = cardInfo.front;
+            cardFront.appendChild(frontImage);
+
+            const cardBack = document.createElement("div");
+            cardBack.classList.add("card-back");
+            const backImage = document.createElement("img");
+            backImage.src = cardInfo.back;
+            cardBack.appendChild(backImage);
+
+            cardInner.appendChild(cardFront);
+            cardInner.appendChild(cardBack);
+            card.appendChild(cardInner);
+
+            return card;
+        }
+
+        // Create cards and add them to the card container
+        cardData.cards.forEach(cardInfo => {
+            const card = createCard(cardInfo);
+            cardContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

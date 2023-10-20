@@ -1,0 +1,183 @@
+{
+  "cards": [
+    {
+      "front": "10_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "10_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "10_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "10_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "2_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "2_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "2_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "2_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "3_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "3_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "3_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "3_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "4_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "4_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "4_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "4_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "5_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "5_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "5_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "5_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "6_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "6_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "6_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "6_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "7_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "7_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "7_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "7_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "8_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "8_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "8_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "8_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "9_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "9_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "9_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "9_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "ace_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "ace_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "ace_of_hearts.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "ace_of_spades.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "ace_of_spades2.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "black_joker.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "jack_of_clubs.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "jack_of_clubs2.png",
+      "back": "Back_blue.png"
+    },
+    {
+      "front": "jack_of_diamonds.png",
+      "back": "Back_blue.png"
+    },
+    {
